@@ -87,9 +87,11 @@ int main() {
 	cin >> n;	
     computeLPSArray(pat, pat.length());
     
+    cin.ignore();
+    
     while(n--){
     	string txt;
-    	cin.ignore();
+    	
     	getline(cin,txt);
     	KMPSearch(txt);
 	}
