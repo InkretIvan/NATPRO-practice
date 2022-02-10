@@ -9,19 +9,7 @@ using namespace std;
 	int n,m;
 	vector<string> library;
 
-int minn(int x, int y, int z) {
 
-  int smallest = INT_MAX;
-
-  if (x < smallest)
-    smallest=x;
-  if (y < smallest)
-    smallest=y;
-  if(z < smallest)
-    smallest=z;
-
-  return smallest;
-}
 
 bool provjeri(string s){
 	
@@ -30,7 +18,15 @@ bool provjeri(string s){
 		string book=library[c];
 		int x=book.length();
 		int y=s.length();
-		int distance;
+		int distance=0;
+		
+		if(x!=y) continue;
+		
+		for(int i=0;i<x;i++){
+			if(book[i]!=s[i]) distance++;
+		}
+		
+		if(distance<=1) return true;
 		
 		
 		
