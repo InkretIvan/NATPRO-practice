@@ -18,7 +18,7 @@ void main2(){
 	cin >> l >> r;
 	
 	for(int x=l;x<=r;x++){
-		for(int y=x+1;y<=r;y++){
+		for(int y=x*2;y<=r;y+=x){
 			int num=GCD(x,y);
 			if(num>=l && num<=r){
 				cout << x << " " << y << endl;
