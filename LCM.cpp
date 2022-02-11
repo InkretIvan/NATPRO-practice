@@ -16,8 +16,9 @@ int LCA(int a, int b){
 void main2(){
 	
 	cin >> l >> r;
+	int n=l+sqrt(r-l);
 	
-	for(int x=l;x<=r;x++){
+	for(int x=l;x<=n;x++){
 		for(int y=x*2;y<=r;y+=x){
 			int num=GCD(x,y);
 			if(num>=l && num<=r){
